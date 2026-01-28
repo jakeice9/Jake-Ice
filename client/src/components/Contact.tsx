@@ -100,8 +100,20 @@ export function Contact() {
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.4 }}
           >
-            <div className="bg-white rounded-2xl p-8 text-slate-900 shadow-xl">
-              <h3 className="text-2xl font-bold mb-6">Send a Message</h3>
+            <div className="bg-white/5 backdrop-blur-sm p-8 rounded-2xl border border-white/10">
+              {/* ============================================================
+                  ACTIVITY 4: ADD USER INPUT
+                  Goal: Add a working form to the app.
+                  
+                  This form uses the React Hook Form library (useForm) and Zod schema (insertMessageSchema).
+                  
+                  Fields Added:
+                  1. Name (Text Input)
+                  2. Email (Text Input with validation)
+                  3. Message (Text Area)
+                  
+                  When submitted, it triggers the useCreateMessage hook to send data to the backend.
+                 ============================================================ */}
               <Form {...form}>
                 <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
                   <FormField

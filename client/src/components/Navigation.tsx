@@ -1,5 +1,14 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-scroll";
+/* ============================================================
+   ACTIVITY 1.5 EDIT
+   Goal: Identify where icons come from.
+   
+   These components (Menu, X) were originally imported from "lucide-react".
+   They are pre-made SVG icons.
+   Note: We replaced their usage in Activity 1.3 with text, but the import remains
+   available if we ever want to switch back to icons.
+   ============================================================ */
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
@@ -37,6 +46,12 @@ export function Navigation() {
           duration={500}
           className="text-xl font-bold font-display tracking-tight cursor-pointer uppercase"
         >
+          {/* ============================================================
+            ACTIVITY 3: MOBILE FIX
+            Problem: "The navigation menu overlaps the content on small screens"
+            Fix: Added responsive padding/sizing logic in the main layout and text size adjustments.
+            (See also: Mobile Menu section below)
+           ============================================================ */}
           Jake <span className="text-primary">Ice</span>
         </Link>
 
@@ -77,6 +92,26 @@ export function Navigation() {
         </div>
 
         {/* Mobile Toggle */}
+        {/* ============================================================
+            ACTIVITY 1.2 EDIT
+            Goal: Understand the code block intuitively.
+            
+            1. The Button Element: <button ... >
+               Just a clickable button-nothing fancy yet.
+            
+            2. The Styling: className="lg:hidden p-2 text-foreground"
+               - lg:hidden: Hides this button on large screens. It only shows on mobile/tablets.
+               - p-2: Adds padding inside the button.
+               - text-foreground: Sets the text color to the theme's foreground color.
+            
+            3. The Click Action: onClick={() => setIsOpen(!isOpen)}
+               - onClick: "When someone clicks this button..."
+               - setIsOpen(!isOpen): "...toggle the state between Open/Close."
+            
+            4. The Content: {isOpen ? "Close" : "Open"}
+               - Replaced icons (ACTIVITY 1.3) with text based trigger.
+               - isOpen ? "Close" : "Open" -> If open, show "Close", else show "Open".
+           ============================================================ */}
         {/* ============================================================
             ACTIVITY 1.3 & 1.4 EDIT (PART 2)
             Change: 
