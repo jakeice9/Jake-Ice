@@ -8,102 +8,82 @@
   --font-display: 'Outfit', sans-serif;
   --font-body: 'Plus Jakarta Sans', sans-serif;
 
-  /* Modern Professional Blue Palette */
-  --background: 210 50% 98%;
-  --foreground: 222 47% 11%;
-  
-  --primary: 221 83% 45%; /* Deep Professional Blue */
-  --primary-foreground: 210 40% 98%;
-  
-  --secondary: 210 40% 96%;
-  --secondary-foreground: 222 47% 11%;
-  
-  --muted: 215 25% 95%;
-  --muted-foreground: 215 15% 45%;
-  
-  --accent: 217 91% 60%; /* Vibrant Royal Blue Accent */
+  /* ============================================================
+      ACTIVITY 1.6 EDIT (LIGHT MODE)
+      Changes: Replaced Blue with the Sacred Heart Green/Gold.
+      HSL Breakdown: Hue (0-360), Saturation %, Lightness %
+     ============================================================ */
+  --background: 140 20% 98%;
+  /* Very pale green tint */
+  --foreground: 140 47% 11%;
+  /* Deep dark green for text */
+
+  --primary: 45 90% 50%;
+  /* Sacred Heart GOLD */
+  --primary-foreground: 140 20% 5%;
+  /* Dark text for contrast on gold buttons */
+
+  --secondary: 145 30% 96%;
+  --secondary-foreground: 140 47% 11%;
+
+  --muted: 145 20% 95%;
+  --muted-foreground: 145 15% 45%;
+
+  --accent: 30 90% 50%;
+  /* More orange-gold for vibrancy */
   --accent-foreground: 210 40% 98%;
-  
-  --destructive: 0 84% 60%;
-  --destructive-foreground: 210 40% 98%;
-  
-  --border: 214 32% 91%;
-  --input: 214 32% 91%;
-  --ring: 221 83% 45%;
-  
+
+  /* ... border and input stay standard ... */
+  --border: 145 20% 91%;
+  --input: 145 20% 91%;
+  --ring: 45 90% 50%;
+
   --radius: 0.5rem;
 }
 
 .dark {
-  --background: 222 47% 6%;
-  --foreground: 210 40% 98%;
-  
-  --primary: 217 91% 60%;
-  --primary-foreground: 222 47% 11%;
-  
-  --secondary: 217 33% 12%;
+  /* ============================================================
+      ACTIVITY 1.6 EDIT (DARK MODE)
+      Changes: Created the "Deep Green" atmosphere.
+     ============================================================ */
+  --background: 140 20% 10%;
+  /* DARK GREEN background (from Activity 1.6 instructions) */
+  --foreground: 45 100% 96%;
+  /* Warm white text */
+
+  --primary: 45 90% 50%;
+  /* GOLD primary color */
+  --primary-foreground: 140 20% 5%;
+
+  --secondary: 145 30% 15%;
+  /* Slightly lighter dark green */
   --secondary-foreground: 210 40% 98%;
-  
-  --muted: 217 33% 12%;
-  --muted-foreground: 215 20% 65%;
-  
-  --accent: 217 91% 60%;
+
+  --muted: 145 20% 12%;
+  --muted-foreground: 145 10% 60%;
+
+  --accent: 30 90% 50%;
+  /* Vibrant orange-gold */
   --accent-foreground: 210 40% 98%;
-  
-  --destructive: 0 62% 30%;
-  --destructive-foreground: 210 40% 98%;
-  
-  --border: 217 33% 18%;
-  --input: 217 33% 18%;
-  --ring: 224 76% 48%;
+
+  --border: 145 20% 20%;
+  --input: 145 20% 20%;
+  --ring: 45 90% 50%;
 }
+
+/* ============================================================
+    END OF ACTIVITY 1.6 EDIT
+   ============================================================ */
+
+/* ... rest of the file stays the same ... */
 
 @layer base {
   * {
     @apply border-border;
   }
+
   body {
     @apply bg-background text-foreground antialiased selection:bg-primary/20 selection:text-primary;
     font-family: var(--font-body);
   }
-  h1, h2, h3, h4, h5, h6 {
-    font-family: var(--font-display);
-    @apply tracking-tight;
-  }
-}
-
-/* Custom Scrollbar */
-::-webkit-scrollbar {
-  width: 10px;
-}
-::-webkit-scrollbar-track {
-  @apply bg-transparent;
-}
-::-webkit-scrollbar-thumb {
-  @apply bg-primary/20 rounded-full hover:bg-primary/40 transition-colors;
-}
-
-/* Smooth Scrolling */
-html {
-  scroll-behavior: smooth;
-}
-
-/* Glassmorphism utility */
-.glass-panel {
-  @apply bg-white/70 dark:bg-slate-900/70 backdrop-blur-md border border-white/20 shadow-xl;
-}
-
-/* Text Gradients */
-.text-gradient {
-  @apply bg-clip-text text-transparent bg-gradient-to-br from-primary via-blue-600 to-accent animate-gradient-x;
-  background-size: 200% 200%;
-}
-
-@keyframes gradient-x {
-  0%, 100% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-}
-
-.animate-gradient-x {
-  animation: gradient-x 15s ease infinite;
 }
