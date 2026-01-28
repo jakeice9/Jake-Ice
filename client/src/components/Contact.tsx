@@ -68,12 +68,12 @@ export function Contact() {
               <div className="p-8 bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10 hover:border-primary/50 transition-colors">
                 <Mail className="h-10 w-10 text-primary mb-4" />
                 <h3 className="text-xl font-bold mb-2">Email Me</h3>
-                <p className="text-slate-400 mb-4">For any inquiries or opportunities.</p>
+                <p className="text-slate-400 mb-4">I'm always open to discussing new opportunities or collaborations.</p>
                 <a 
                   href="mailto:icej@mail.sacredheart.edu" 
-                  className="text-lg font-medium text-white hover:text-primary transition-colors inline-flex items-center gap-2"
+                  className="text-lg font-medium text-white hover:text-primary transition-all duration-300 inline-flex items-center gap-2 group"
                 >
-                  icej@mail.sacredheart.edu
+                  <span className="border-b border-transparent group-hover:border-primary">icej@mail.sacredheart.edu</span>
                 </a>
               </div>
 

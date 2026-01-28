@@ -54,9 +54,9 @@ export function Hero() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.5, delay: 0.3 }}
-            className="text-lg text-muted-foreground mb-10 italic"
+            className="text-lg md:text-xl text-muted-foreground mb-10 italic"
           >
-            "Motivated, hardworking, and interested in data and business."
+            "Motivated, hardworking, and deeply interested in the intersection of data science and business development."
           </motion.p>
 
           <motion.div 
